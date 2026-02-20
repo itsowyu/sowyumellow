@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Vault</title>
+</head>
+
+<body>
+    <div id="login-form">
+        <h1>Vault Login</h1>
+        <p>Username: <input type="text" id="user"></p>
+        <p>Password: <input type="password" id="pass"></p>
+        <button onclick="login()">Enter</button>
+        <p id="error" style="color: red;"></p>
+    </div>
+
+    <div id="vault-content" style="display: none;">
+        <h1>Vault Contents</h1>
+        <p>You are logged in!</p>
+        <ul>
+            <li>Secret 1: 1234</li>
+            <li>Secret 2: Password is 'admin'</li>
+            <li>Secret 3: The treasure is buried under the old oak tree.</li>
+        </ul>
+        <button onclick="location.reload()">Lock Vault</button>
+    </div>
+
+    <script>
+        function login() {
+            var u = document.getElementById('user').value;
+            var p = document.getElementById('pass').value;
+
+            // Using 'admin/admin' for simplicity
+            if (u === "admin" && p === "admin") {
+                document.getElementById('login-form').style.display = 'none';
+                document.getElementById('vault-content').style.display = 'block';
+            } else {
+                document.getElementById('error').innerText = "Incorrect username or password.";
+            }
+        }
+    </script>
+</body>
+
+</html>

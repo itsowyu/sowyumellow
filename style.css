@@ -9,6 +9,7 @@ body {
     margin: 0;
     padding: 0;
     /* my tech is da bomb. hope y2k isnt real and doesnt fry my hard drive!!!! */
+    /* primrose acadamy */
     font-family: "Times New Roman", Times, serif;
 }
 
@@ -21,24 +22,20 @@ body {
 }
 
 .logo:hover {
-    animation: wiggle 1s ease-in-out infinite;
+    animation: wiggle 0.8s linear infinite;
 }
 
 @keyframes wiggle {
     0% {
-        transform: rotate(0deg);
+        transform: rotate(-8deg);
     }
 
-    25% {
-        transform: rotate(-5deg);
-    }
-
-    75% {
-        transform: rotate(5deg);
+    50% {
+        transform: rotate(8deg);
     }
 
     100% {
-        transform: rotate(0deg);
+        transform: rotate(-8deg);
     }
 }
 
@@ -116,5 +113,9 @@ button {
 }
 
 .test:hover {
-    animation: wiggle 1s ease-in-out infinite;
+    animation: wiggle 0.6s linear infinite;
+}
+
+.fullscreen-textarea {
+    height: max-content;
 }
