@@ -1,0 +1,203 @@
+.draggable-window {
+    position: absolute;
+    z-index: 9;
+    text-align: center;
+    width: 250px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    overflow: visible;
+}
+
+.draggable-window.about-draggable-window {
+    width: 250px;
+    height: 250px;
+    max-width: 564px;
+    max-height: 564px;
+}
+
+.about-draggable-window img {
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.draggable-window.glass > .title-bar {
+    background-attachment: local;
+}
+
+.draggable-header {
+    padding: 2px 10px 8px;
+    cursor: move;
+    z-index: 10;
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+.draggable-window .window-body {
+    flex: 1 1 auto;
+    min-height: 0;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: 1px solid #b9ccdb;
+    overflow: hidden;
+}
+
+.window-body.apps-window-body {
+    display: block;
+    text-align: center;
+}
+
+.apps-label {
+    margin: 0 0 12px 0;
+    text-align: center;
+}
+
+.app-icon-row {
+    text-align: center;
+}
+
+.app-icon-row img {
+    width: 40px;
+    height: auto;
+    display: inline-block;
+}
+
+.app-icon-row img:not(.app-disabled) {
+    cursor: pointer;
+}
+
+.app-icon-row img:not(.app-disabled):hover {
+    opacity: 0.85;
+}
+
+.app-icon-row img:not(.app-disabled):active {
+    transform: translateY(1px);
+}
+
+.resize-handle {
+    position: absolute;
+    z-index: 11;
+}
+
+.resize-handle.n,
+.resize-handle.s {
+    left: 12px;
+    right: 12px;
+    height: 12px;
+}
+
+.resize-handle.n {
+    top: -6px;
+    cursor: ns-resize;
+}
+
+.resize-handle.s {
+    bottom: -6px;
+    cursor: ns-resize;
+}
+
+.resize-handle.e,
+.resize-handle.w {
+    top: 12px;
+    bottom: 12px;
+    width: 12px;
+}
+
+.resize-handle.e {
+    right: -6px;
+    cursor: ew-resize;
+}
+
+.resize-handle.w {
+    left: -6px;
+    cursor: ew-resize;
+}
+
+.resize-handle.nw,
+.resize-handle.ne,
+.resize-handle.sw,
+.resize-handle.se {
+    width: 24px;
+    height: 24px;
+}
+
+.resize-handle.nw {
+    top: -12px;
+    left: -12px;
+    cursor: nwse-resize;
+}
+
+.resize-handle.ne {
+    top: -12px;
+    right: -12px;
+    cursor: nesw-resize;
+}
+
+.resize-handle.sw {
+    bottom: -12px;
+    left: -12px;
+    cursor: nesw-resize;
+}
+
+.resize-handle.se {
+    bottom: -12px;
+    right: -12px;
+    cursor: nwse-resize;
+}
+
+body {
+    background-image: url("images/clouds.jpg");
+    margin: 0;
+}
+
+p {
+    font-family: "Segoe UI";
+    text-align: center;
+    margin: 0;
+}
+
+h1 {
+    font-family: "Segoe UI";
+    text-align: center;
+    margin: 0;
+}
+
+.title-bar-text {
+    font-family: "Times New Roman";
+    font-size: 13px;
+    position: relative;
+    top: 0;
+}
+
+.help-control {
+    position: relative;
+    display: inline-block;
+}
+
+.help-balloon {
+    position: absolute;
+    bottom: 30px;
+    right: 0px;
+    margin-bottom: 8px;
+    text-align: left;
+    width: max-content;
+    white-space: normal;
+    line-height: 1.35;
+    padding: 10px 12px;
+}
+
+.close-button-disabled {
+    cursor: not-allowed;
+}
+
+.app-disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    filter: grayscale(1);
+}

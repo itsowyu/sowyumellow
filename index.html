@@ -1,0 +1,162 @@
+<!doctype html>
+<html>
+    <head>
+        <title>aniko's website</title>
+        <link rel="stylesheet" href="https://unpkg.com/7.css" />
+        <link rel="stylesheet" href="style.css" />
+        <script src="script.js" defer></script>
+    </head>
+    <body>
+        <div>
+            <h1>aniko's website</h1>
+            <p>Welcome to my website!</p>
+            <div class="background">
+                <div
+                    class="window glass active draggable-window about-draggable-window"
+                    style="
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        --w7-w-bg: #679767;
+                    "
+                >
+                    <div class="title-bar draggable-header">
+                        <div class="title-bar-text">About me</div>
+                        <div class="title-bar-controls">
+                            <div class="help-control">
+                                <button aria-label="Help"></button>
+                                <div
+                                    role="tooltip"
+                                    class="help-balloon is-top is-left"
+                                    hidden
+                                >
+                                    no help for you :p
+                                </div>
+                            </div>
+                            <button aria-label="Close"></button>
+                        </div>
+                    </div>
+                    <div class="window-body">
+                        <p>
+                            <img
+                                src="images/life.jpeg"
+                                alt="where did life go"
+                            />
+                        </p>
+                    </div>
+                    <div class="resize-handle n"></div>
+                    <div class="resize-handle e"></div>
+                    <div class="resize-handle s"></div>
+                    <div class="resize-handle w"></div>
+                    <div class="resize-handle nw"></div>
+                    <div class="resize-handle ne"></div>
+                    <div class="resize-handle sw"></div>
+                    <div class="resize-handle se"></div>
+                </div>
+
+                <!-- HERE ID HERE -->
+                <div
+                    id="cellphone-window"
+                    class="window glass active draggable-window cellphone-window"
+                    style="
+                        top: 75%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        --w7-w-bg: #1a1a1a;
+                    "
+                >
+                    <div class="title-bar draggable-header">
+                        <div class="title-bar-text">your cellphone.</div>
+                        <div class="title-bar-controls">
+                            <div class="help-control">
+                                <button aria-label="Help"></button>
+                                <div
+                                    role="tooltip"
+                                    class="help-balloon is-top is-left"
+                                    hidden
+                                >
+                                    no help for you :p
+                                </div>
+                            </div>
+                            <button aria-label="Close"></button>
+                        </div>
+                    </div>
+                    <div class="window-body has-space">
+                        <p>
+                            What does it do? you may never know. Wait for a ring
+                            it might come soon
+                        </p>
+                        <img
+                            src="images/cellphone.png"
+                            width="50"
+                            height="auto"
+                            alt="Cellphone"
+                        />
+                    </div>
+                    <div class="resize-handle n"></div>
+                    <div class="resize-handle e"></div>
+                    <div class="resize-handle s"></div>
+                    <div class="resize-handle w"></div>
+                    <div class="resize-handle nw"></div>
+                    <div class="resize-handle ne"></div>
+                    <div class="resize-handle sw"></div>
+                    <div class="resize-handle se"></div>
+                </div>
+
+                <!-- APPLICATIONS -->
+                <div
+                    class="window glass active draggable-window"
+                    style="
+                        top: 25%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                    "
+                >
+                    <!--title bar -->
+                    <div class="title-bar draggable-header">
+                        <div class="title-bar-text">App selector</div>
+                        <div class="title-bar-controls">
+                            <div class="help-control">
+                                <button aria-label="Help"></button>
+                                <div
+                                    role="tooltip"
+                                    class="help-balloon is-top is-left"
+                                    hidden
+                                >
+                                    no help for you :p
+                                </div>
+                            </div>
+                            <button
+                                class="close-button-disabled"
+                                aria-label="Close"
+                                disabled
+                            ></button>
+                        </div>
+                    </div>
+
+                    <!-- Window body -->
+                    <div class="window-body has-space apps-window-body">
+                        <p class="apps-label">Applications:</p>
+                        <div class="app-icon-row">
+                            <img
+                                src="images/cellphone.png"
+                                alt="Cellphone Icon"
+                                data-window-target="cellphone-window"
+                            />
+                        </div>
+                    </div>
+
+                    <!-- Resize logic -->
+                    <div class="resize-handle n"></div>
+                    <div class="resize-handle e"></div>
+                    <div class="resize-handle s"></div>
+                    <div class="resize-handle w"></div>
+                    <div class="resize-handle nw"></div>
+                    <div class="resize-handle ne"></div>
+                    <div class="resize-handle sw"></div>
+                    <div class="resize-handle se"></div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
